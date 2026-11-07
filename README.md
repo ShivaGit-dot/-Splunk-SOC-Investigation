@@ -276,6 +276,7 @@ This capstone investigation demonstrates the correlation of endpoint telemetry a
 
 - **GitHub:** [ShivaGit-dot](https://github.com/ShivaGit-dot)
 - **LinkedIn:** linkedin.com/in/shiva-gaud-57048a41b
+- **Gmail:** shiva.gaud120@gmail.com
 
 
 ### 📌 Disclaimer
