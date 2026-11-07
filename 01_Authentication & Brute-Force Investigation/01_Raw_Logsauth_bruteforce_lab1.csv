@@ -1,0 +1,46 @@
+_time,EventID,ComputerName,Account_Name,Source_Network_Address,Logon_Type,Status,Failure_Reason
+2023-11-14 09:45:10,4624,WKSTN-HR-01,m.joshi,10.10.20.14,2,Success,None
+2023-11-14 09:47:22,4624,WKSTN-FIN-02,r.patel,10.10.30.22,2,Success,None
+2023-11-14 09:50:05,4625,WKSTN-FIN-02,r.patel,10.10.30.22,2,Failed,Bad Password
+2023-11-14 09:50:14,4624,WKSTN-FIN-02,r.patel,10.10.30.22,2,Success,None
+2023-11-14 09:52:30,4624,SRV-DB-01,svc_backup,10.10.10.5,3,Success,None
+2023-11-14 09:55:00,4624,SRV-WEB-01,web_admin,10.10.10.12,10,Success,None
+2023-11-14 09:58:12,4625,WKSTN-IT-04,k.verma,10.10.40.18,2,Failed,Bad Password
+2023-11-14 09:58:19,4625,WKSTN-IT-04,k.verma,10.10.40.18,2,Failed,Bad Password
+2023-11-14 09:58:28,4624,WKSTN-IT-04,k.verma,10.10.40.18,2,Success,None
+2023-11-14 10:00:01,4625,SRV-WEB-01,Administrator,198.51.100.44,10,Failed,Bad Password
+2023-11-14 10:00:04,4625,SRV-WEB-01,Administrator,198.51.100.44,10,Failed,Bad Password
+2023-11-14 10:00:07,4625,SRV-WEB-01,Administrator,198.51.100.44,10,Failed,Bad Password
+2023-11-14 10:00:10,4625,SRV-WEB-01,Administrator,198.51.100.44,10,Failed,Bad Password
+2023-11-14 10:00:13,4625,SRV-WEB-01,Administrator,198.51.100.44,10,Failed,Bad Password
+2023-11-14 10:00:16,4625,SRV-WEB-01,Administrator,198.51.100.44,10,Failed,Bad Password
+2023-11-14 10:00:19,4625,SRV-WEB-01,Administrator,198.51.100.44,10,Failed,Bad Password
+2023-11-14 10:00:22,4625,SRV-WEB-01,Administrator,198.51.100.44,10,Failed,Bad Password
+2023-11-14 10:00:25,4625,SRV-WEB-01,Administrator,198.51.100.44,10,Failed,Bad Password
+2023-11-14 10:00:28,4625,SRV-WEB-01,Administrator,198.51.100.44,10,Failed,Bad Password
+2023-11-14 10:00:31,4625,SRV-WEB-01,admin,198.51.100.44,10,Failed,Unknown User
+2023-11-14 10:00:34,4625,SRV-WEB-01,admin,198.51.100.44,10,Failed,Unknown User
+2023-11-14 10:00:38,4625,SRV-WEB-01,Administrator,198.51.100.44,10,Failed,Bad Password
+2023-11-14 10:00:42,4625,SRV-WEB-01,Administrator,198.51.100.44,10,Failed,Bad Password
+2023-11-14 10:00:46,4625,SRV-WEB-01,Administrator,198.51.100.44,10,Failed,Bad Password
+2023-11-14 10:00:50,4625,SRV-WEB-01,Administrator,198.51.100.44,10,Failed,Bad Password
+2023-11-14 10:00:54,4625,SRV-WEB-01,Administrator,198.51.100.44,10,Failed,Bad Password
+2023-11-14 10:00:58,4625,SRV-WEB-01,Administrator,198.51.100.44,10,Failed,Bad Password
+2023-11-14 10:01:02,4625,SRV-WEB-01,Administrator,198.51.100.44,10,Failed,Bad Password
+2023-11-14 10:01:06,4625,SRV-WEB-01,Administrator,198.51.100.44,10,Failed,Bad Password
+2023-11-14 10:01:10,4625,SRV-WEB-01,Administrator,198.51.100.44,10,Failed,Bad Password
+2023-11-14 10:01:14,4625,SRV-WEB-01,Administrator,198.51.100.44,10,Failed,Bad Password
+2023-11-14 10:01:18,4625,SRV-WEB-01,Administrator,198.51.100.44,10,Failed,Bad Password
+2023-11-14 10:01:22,4625,SRV-WEB-01,Administrator,198.51.100.44,10,Failed,Bad Password
+2023-11-14 10:01:26,4625,SRV-WEB-01,Administrator,198.51.100.44,10,Failed,Bad Password
+2023-11-14 10:01:30,4625,SRV-WEB-01,Administrator,198.51.100.44,10,Failed,Bad Password
+2023-11-14 10:01:34,4625,SRV-WEB-01,Administrator,198.51.100.44,10,Failed,Bad Password
+2023-11-14 10:01:38,4625,SRV-WEB-01,Administrator,198.51.100.44,10,Failed,Bad Password
+2023-11-14 10:01:42,4625,SRV-WEB-01,Administrator,198.51.100.44,10,Failed,Bad Password
+2023-11-14 10:01:45,4624,SRV-WEB-01,Administrator,198.51.100.44,10,Success,None
+2023-11-14 10:03:10,4624,WKSTN-HR-02,s.khan,10.10.20.19,2,Success,None
+2023-11-14 10:05:00,4624,SRV-DB-01,svc_backup,10.10.10.5,3,Success,None
+2023-11-14 10:07:40,4624,WKSTN-FIN-04,a.sharma,10.10.30.44,2,Success,None
+2023-11-14 10:10:12,4625,SRV-FILE-01,d.patil,10.10.25.31,3,Failed,Bad Password
+2023-11-14 10:10:20,4624,SRV-FILE-01,d.patil,10.10.25.31,3,Success,None
+2023-11-14 10:15:00,4624,SRV-WEB-01,web_admin,10.10.10.12,10,Success,None

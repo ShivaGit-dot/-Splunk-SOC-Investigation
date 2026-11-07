@@ -1,0 +1,21 @@
+# VirusTotal IP Reputation Analysis
+
+Investigation: Lab 5 — Comprehensive Threat Investigation & Incident Response
+Tool: VirusTotal
+Indicator Type: IPv4 address
+Indicator: 198.51.100.99
+
+# Observations
+
+ Community score displayed: 0
+ Associated files communicating with the IP: 8
+
+# Assessment
+
+VirusTotal displayed a community score of 0 and eight associated files communicating with the queried IP address. These observations alone do not establish whether the IP or the associated files are malicious.
+The queried IP belongs to a documentation-reserved range and is used as a synthetic indicator in this training exercise.
+
+## Conclusion
+
+The lookup demonstrates the threat-intelligence enrichment workflow. No real-world malicious reputation verdict is assigned.
+
