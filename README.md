@@ -64,43 +64,21 @@ The investigations follow a structured security investigation methodology:
 
 Evidence → Behavior → Correlation → Assessment → MITRE ATT&CK → Severity → Response
 
-##  Repository Structure
+## 📂 Repository Structure
 
-The repository is organized into five individual investigation projects.
+The repository is organized into five individual SOC investigation projects, with dedicated folders for datasets, Splunk queries, screenshots, dashboards, and investigation reports.
 
+```text
 Splunk-SOC-Investigation/
 │
 ├── 01_Authentication & Brute-Force Investigation/
-│   ├── Raw Dataset
-│   ├── 02_Spl_Searches/
-│   ├── 03_Screenshots/
-│   ├── Dashboard Screenshot
-│   └── 05_Final_Report/
-│
 ├── 02_Suspicious PowerShell Investigation/
-│   ├── Dataset
-│   ├── Splunk Searches
-│   ├── Screenshots
-│   ├── Dashboard
-│   └── Final Report
-│
 ├── 03_Suspicious Office Document Investigation/
-│   ├── Dataset
-│   ├── Splunk Searches
-│   ├── Screenshots
-│   ├── Dashboard
-│   └── Final Report
-│
 ├── 04_Credential_Attack_Investigation/
-│   ├── Dataset
-│   ├── Splunk Searches
-│   ├── Screenshots
-│   ├── Dashboard
-│   └── Final Report
 │
 ├── 05_Comprehensive_Threat_Investigation/
-│   ├── Dataset
-│   ├── Splunk Searches
+│   ├── 01_Data/
+│   ├── 02_Splunk_Searches/
 │   ├── 03_Screenshots/
 │   │   ├── Splunk/
 │   │   └── Wireshark/
